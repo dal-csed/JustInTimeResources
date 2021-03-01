@@ -13,7 +13,7 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.php">Start Bootstrap</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         </nav>
         <div id="layoutSidenav">
@@ -22,108 +22,108 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Home
                             </a>
                             <div class="sb-sidenav-menu-heading">Courses</div>
 
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Home
                             </a>
 
-                            <a class="nav-link" href="csci1107.html">
+                            <a class="nav-link" href="csci1107.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1107
                             </a>
 
-                            <a class="nav-link" href="csci1108.html">
+                            <a class="nav-link" href="csci1108.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1108
                             </a>
 
-                            <a class="nav-link" href="csci1110.html">
+                            <a class="nav-link" href="csci1110.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1110
                             </a>
 
-                            <a class="nav-link" href="csci1120.html">
+                            <a class="nav-link" href="csci1120.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1120
                             </a>
 
-                            <a class="nav-link" href="csci1170.html">
+                            <a class="nav-link" href="csci1170.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1170
                             </a>
 
-                            <a class="nav-link" href="csci1800_1801.html">
+                            <a class="nav-link" href="csci1800_1801.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 1800/1801
                             </a>
 
-                            <a class="nav-link" href="csci2100.html">
+                            <a class="nav-link" href="csci2100.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2100
                             </a>
                             
-                            <a class="nav-link" href="csci2110.html">
+                            <a class="nav-link" href="csci2110.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2110
                             </a>
 
-                            <a class="nav-link" href="csci2112.html">
+                            <a class="nav-link" href="csci2112.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2112
                             </a>
 
-                            <a class="nav-link" href="csci2122.html">
+                            <a class="nav-link" href="csci2122.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2122
                             </a>
 
-                            <a class="nav-link" href="csci2134.html">
+                            <a class="nav-link" href="csci2134.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2134
                             </a>
 
-                            <a class="nav-link" href="csci2141.html">
+                            <a class="nav-link" href="csci2141.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2141
                             </a>
 
-                            <a class="nav-link" href="csci2170.html">
+                            <a class="nav-link" href="csci2170.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 2170
                             </a>
 
-                            <a class="nav-link" href="csci3101.html">
+                            <a class="nav-link" href="csci3101.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3101
                             </a>
 
-                            <a class="nav-link" href="csci3110.html">
+                            <a class="nav-link" href="csci3110.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3110
                             </a>
 
-                            <a class="nav-link" href="csci3120.html">
+                            <a class="nav-link" href="csci3120.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3120
                             </a>
 
-                            <a class="nav-link" href="csci3130.html">
+                            <a class="nav-link" href="csci3130.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3130
                             </a>
 
-                            <a class="nav-link" href="csci3171.html">
+                            <a class="nav-link" href="csci3171.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3171
                             </a>
 
-                            <a class="nav-link" href="csci3172.html">
+                            <a class="nav-link" href="csci3172.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 CSCI 3172
                             </a>
