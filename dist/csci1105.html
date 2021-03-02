@@ -8,6 +8,7 @@
         <meta name="author" content="" />
         <title>CSCI 1105</title>
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cardstyle.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -140,12 +141,47 @@
                             <li class="breadcrumb-item active">1105</li>
                         </ol>
                         <div class="row" style="padding-left: 2%;padding-right: 2%;">
-                            <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
+                            <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
                             <p>The sidebar on the left includes the CS courses which you can select to view a list of related LinkedIn Learning resources.</p>
-                            <p>Below are tutorials on how to create an account and log in with the Halifax Public Libraries, and how to access LinkedIn Learning through Halifax Public Libraries. </p>
-                            <p>NOTE: Students can register even if they are currently not in NS. When entering your address details, use the address of the faculty they are studying with or use the Dalhousie address. You can then select the box to declare that you are a Nova Scotia Resident.</p>
+                            <p>Below are tutorials on how to create an account and log in with the Halifax Public Libraries, and how to access LinkedIn Learning through Halifax Public Libraries. </p>
+                            <p>NOTE: Students can register even if they are currently not in NS. When entering your address details, use the address of the faculty they are studying with or use the Dalhousie address. You can then select the box to declare that you are a Nova Scotia Resident.</p>
                         </div>
+
                     </div>
+
+                    <div class="container-fluid mt-2">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+                        <div class="card card-block">
+                          <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+                          <h5 class="card-title ml-2 mr-2 mt-3 mb-3">Sierra Web Development • Owner</h5>
+                          <p class="card-text ml-2 mr-2">This is a company that builds websites, web apps and e-commerce solutions. </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+                        <div class="card card-block">
+                          <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+                          <h5 class="card-title ml-2 mr-2 mt-3 mb-3">Sierra Web Development • Owner</h5>
+                          <p class="card-text ml-2 mr-2">This is a company that builds websites, web apps and e-commerce solutions. </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+                        <div class="card card-block">
+                          <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+                          <h5 class="card-title ml-2 mr-2 mt-3 mb-3">Sierra Web Development • Owner</h5>
+                          <p class="card-text ml-2 mr-2">This is a company that builds websites, web apps and e-commerce solutions. </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+                        <div class="card card-block">
+                          <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+                          <h5 class="card-title ml-2 mr-2 mt-3 mb-3">Sierra Web Development • Owner</h5>
+                          <p class="card-text ml-2 mr-2">This is a company that builds websites, web apps and e-commerce solutions. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
