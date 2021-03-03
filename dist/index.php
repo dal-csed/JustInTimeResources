@@ -13,7 +13,7 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+          <a class="navbar-brand" href="index.html" style="font-family:Verdana "> JUST IN TIME</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         </nav>
         <div id="layoutSidenav">
@@ -23,7 +23,7 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa fa-home"></i></div>
                                 Home
                             </a>
                             <div class="sb-sidenav-menu-heading">Courses</div>
@@ -67,7 +67,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                                 CSCI 2100
                             </a>
-                            
+
                             <a class="nav-link" href="csci2110.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                                 CSCI 2110
@@ -155,7 +155,7 @@
                                   </button>
                                 </h2>
                               </div>
-                          
+
                               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=70101520-62f1-4e3d-988f-acb801015a06&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
