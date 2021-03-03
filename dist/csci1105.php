@@ -134,17 +134,22 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
+                    <?php
+                        $CourseNumber = "CSCI 1105";
+                    ?>
                     <div class="container-fluid">
+<<<<<<< HEAD
                         <h1 class="mt-4" style="font-family:Verdana">Just In Time Resources</h1>
+=======
+                        <h1 class="mt-4"><?php echo $CourseNumber ?></h1>
+>>>>>>> 4264bea0d29ace76faf3bdc0da75bd8c7b81e3ef
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item">Home</li>
                             <li class="breadcrumb-item active">1105</li>
                         </ol>
                         <div class="row" style="padding-left: 2%;padding-right: 2%;">
                             <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
-                            <p>The sidebar on the left includes the CS courses which you can select to view a list of related LinkedIn Learning resources.</p>
-                            <p>Below are tutorials on how to create an account and log in with the Halifax Public Libraries, and how to access LinkedIn Learning through Halifax Public Libraries. </p>
-                            <p>NOTE: Students can register even if they are currently not in NS. When entering your address details, use the address of the faculty they are studying with or use the Dalhousie address. You can then select the box to declare that you are a Nova Scotia Resident.</p>
+                            <p></p>
                             <p><strong>IMPORTANT: The library ID for LinkedInLearning is halifaxca</strong></p>
                         </div>
 
