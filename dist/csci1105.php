@@ -138,11 +138,7 @@
                         $CourseNumber = "CSCI 1105";
                     ?>
                     <div class="container-fluid">
-<<<<<<< HEAD
                         <h1 class="mt-4" style="font-family:Verdana">Just In Time Resources</h1>
-=======
-                        <h1 class="mt-4"><?php echo $CourseNumber ?></h1>
->>>>>>> 4264bea0d29ace76faf3bdc0da75bd8c7b81e3ef
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item">Home</li>
                             <li class="breadcrumb-item active">1105</li>
