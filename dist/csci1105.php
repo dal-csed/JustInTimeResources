@@ -12,6 +12,17 @@
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     </head>
+    <?php // Set connection to database
+        $db_host = 'projects.cs.dal.ca';
+        $db_database = 'justintime';
+        $db_username = 'justintime';
+        $db_password = 'quoo6ooFiSoh1eic';
+        $conn = mysqli_connect($db_host, $db_username, $db_password, $db_database);
+        if($conn->connect_error){
+        echo "This is bad\n";
+        die("Connection failed!".mysqli_connect_error);
+        } 
+    ?>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
           <a class="navbar-brand" href="index.html" style="font-family:Verdana "> JUST IN TIME</a>
@@ -153,6 +164,33 @@
 
                     <div class="container-fluid mt-2">
                     <div class="row">
+                        <?php
+                            $pageID="CSCI 1105";
+                            include_once 'scripts\connections.php';
+                            $conn=connect();
+                            $query=$conn->prepare("SELECT CourseName, SuggestedCourse, Length, Note, Link, Picture FROM justintimeresources WHERE CourseNumber=?");
+                            $query->bind_param("i", "CSCI 1105");
+                            $query->execute();
+                            $query->store_result();
+                            if ($result->num_rows >0){
+                                while($row=$result->fetch_assoc()){
+                                $CourseName=$row["CourseName"];
+                                $SuggestedCourse=$row["SuggestedCourse"];
+                                $Length=$row["Length"];
+                                $Note=$row["Note"];
+                                $Link=$row["Link"];
+                                $Picture=$row["Picture"];
+
+                                echo "<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>";
+                                echo "<div class='card card-block'>";
+                                echo "<img src=\'assets/".$Picture."\' alt=\'CSCI1105'>";
+                                echo "<h5 class='card-title m1-2 mr-2 mt-3 mb-3'>".$CourseName."</h5>";
+                                echo "<p class='card-text m1-2 mr-2'>".$Note."</p>";
+                                }
+                            }
+                            $query->close();
+                            closeConn($conn);
+                        ?>
                       <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
                         <div class="card card-block">
                           <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
