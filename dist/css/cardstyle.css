@@ -31,6 +31,11 @@ img{
   height:120px;
 }
 
+.scrollable{
+  overflow-y: auto;
+  max-height: 120px;
+}
+
 .card::before, .card::after {
   position: absolute;
   top: 0;
