@@ -35,7 +35,6 @@
             echo "\t\t\t\t\t\t\t<div class='card card-block'>\n";
             echo "\t\t\t\t\t\t\t\t<img src='assets/img/".$Picture."' alt='".$Picture."'>\n";
             echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
-            echo "\t\t\t\t\t\t\t\t<h6 class='card-title ml-2 mr-2 mt-3 mb-3'>".$Length."</h6>\n";
             echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2'>".$Note."</p>\n";
             echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n";
             }
