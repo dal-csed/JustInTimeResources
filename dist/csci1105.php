@@ -21,7 +21,7 @@
         if($conn->connect_error){
         echo "This is bad\n";
         die("Connection failed!".mysqli_connect_error);
-        } 
+        }
     ?>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -185,7 +185,9 @@
                                 echo "<div class='card card-block'>";
                                 echo "<img src=\'assets/".$Picture."\' alt=\'CSCI1105'>";
                                 echo "<h5 class='card-title m1-2 mr-2 mt-3 mb-3'>".$CourseName."</h5>";
-                                echo "<p class='card-text m1-2 mr-2'>".$Note."</p>";
+                                echo "<p class='card-text m1-2 mr-2 scrollable'>".$Note."</p>";
+                                echo "<div class='card-footer text-muted'>".$Length."</div>";
+
                                 }
                             }
                             $query->close();
