@@ -36,7 +36,7 @@
             // echo "\t\t\t\t\t\t<a style='color: black; text-decoration: none;href='".$Link."'>";
             echo "\t\t\t\t\t\t\t<div class='card card-block'>\n";
             echo "\t\t\t\t\t\t\t\t<img src='assets/img/".$Picture."' alt='".$Picture."'>\n";
-            echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$CourseName."</h5>\n";
+            echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
             echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
             echo "\t\t\t\t\t\t\t\t<a href='".$Link."' class='stretched-link'></a>\n";
             echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
