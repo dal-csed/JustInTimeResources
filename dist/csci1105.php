@@ -154,7 +154,7 @@
                         <div class="card card-block">
                           <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
                           <h5 class="card-title ml-2 mr-2 mt-3 mb-3">Sierra Web Development • Owner</h5>
-                          <p class="card-text ml-2 mr-2">This is a company that builds websites, web apps and e-commerce solutions. </p>
+                          <p class="card-text ml-2 mr-2 scrollable">This is a company that builds websites, web apps and e-commerce solutions. asfkjhaskjfhaksjfhkajshfkajshfkahskjfhajkshfkjahsfjkahsfkjhaskjfhajksfhkjahsfkjjahsfkjahsfkjahsfkjahsfkjahskjfhajksfhklaskfjlaskjflkajsflkajslfkjaslfkjalskjflaksjflaksjflkajsflkkjaslkfjalksjflaskjflaksjflakjsflaksjflkajsajshf </p>
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
