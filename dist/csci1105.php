@@ -182,11 +182,15 @@
                                 $Picture=$row["Picture"];
 
                                 echo "<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>";
+                                echo "<a style='color: black; text-decoration: none;href='".$link;
                                 echo "<div class='card card-block'>";
                                 echo "<img src=\'assets/".$Picture."\' alt=\'CSCI1105'>";
                                 echo "<h5 class='card-title m1-2 mr-2 mt-3 mb-3'>".$CourseName."</h5>";
                                 echo "<p class='card-text m1-2 mr-2 scrollable'>".$Note."</p>";
                                 echo "<div class='card-footer text-muted'>".$Length."</div>";
+                                echo "</div>";
+                                echo "</a>";
+                                echo "</div>";
                                 }
                             }
                             $query->close();
