@@ -21,7 +21,7 @@
         if($conn->connect_error){
         echo "This is bad\n";
         die("Connection failed!".mysqli_connect_error);
-        } 
+        }
     ?>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
