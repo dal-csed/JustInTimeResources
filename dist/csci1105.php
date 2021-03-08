@@ -15,6 +15,14 @@
 </head>
 
 <body class="sb-nav-fixed">
+    <?php
+        $pageID = basename(__FILE__);
+        include 'scripts/connections.php';
+        $conn = connect();
+        $course = getCourseName($conn, $pageID);
+        echo $course;
+    ?>
+
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -137,7 +145,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana">Just In Time Resources</h1>
+                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php $course;?></h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
                         <li class="breadcrumb-item active">1105</li>
@@ -153,10 +161,7 @@
                 <div class="container-fluid mt-2">
                     <div class="row">
                         <?php
-                        include 'scripts/connections.php';
-                        $pageID = "CSCI 1105";
-                        $conn = connect();
-                        getCourse($conn, $pageID);
+                        getCourse($conn, $course);
                         closeConn($conn);
                         ?>
                     </div>

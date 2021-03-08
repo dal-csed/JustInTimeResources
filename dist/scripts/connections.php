@@ -9,8 +9,7 @@
         if($conn->connect_error){
         echo "This is bad\n";
         die("Connection failed!".mysqli_connect_error);
-        } 
-
+        }
         return $conn;
     }
 
@@ -19,13 +18,12 @@
     }
 
     function getCourse($conn, $pageID){
-        $query=$conn->prepare("SELECT CourseName, SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
+        $query=$conn->prepare("SELECT SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE WebPage = ?");
         $query->bind_param("s", $pageID);
         $query->execute();
         $result = $query->get_result();
         if ($result->num_rows >0){
             while($row=$result->fetch_assoc()){
-            $CourseName=$row["CourseName"];
             $SuggestedCourse=$row["SuggestedCourse"];
             $Length=$row["Length"];
             $Note=$row["Note"];
@@ -42,6 +40,20 @@
             echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
             }
         }
+
+        $query->close();
+    }
+
+    function getCourseName($conn, $pageID){
+        $query=$conn->prepare("SELECT CourseName FROM just_in_time_resources WHERE WebPage = ?");
+        $query->bind_param("s", $pageID);
+        $query->execute();
+        $result = $query->get_result();
+
+        while($row=$result->fetch_assoc()){
+            $CourseName=$row["CourseName"];
+        }
+        echo $CourseName;
 
         $query->close();
     }
