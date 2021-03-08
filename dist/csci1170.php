@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>CSCI 1107</title>
+    <title>CSCI 1170</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/cardstyle.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -137,7 +138,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Just In Time Resources</h1>
+                    <h1 class="mt-4" style="font-family:Verdana ">Just In Time Resources</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
                         <li class="breadcrumb-item active">1170</li>
