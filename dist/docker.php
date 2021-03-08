@@ -145,14 +145,13 @@
                               <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
                                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Logging into Halifax Public libraries
+                                    Module 1 - 2
                                   </button>
                                 </h2>
                               </div>
-
                               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=70101520-62f1-4e3d-988f-acb801015a06&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
                                 </div>
                               </div>
                             </div>
@@ -160,13 +159,13 @@
                               <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
                                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Access LinkedIn Learning through Halifax Public Libraries
+                                    Module 3
                                   </button>
                                 </h2>
                               </div>
                               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0058a136-9df5-43e0-8d4b-acaa013889aa&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
                                 </div>
                               </div>
                             </div>
