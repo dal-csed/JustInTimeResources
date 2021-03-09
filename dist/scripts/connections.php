@@ -18,7 +18,7 @@
     }
 
     function getCourse($conn, $pageID){
-        $query=$conn->prepare("SELECT SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE WebPage = ?");
+        $query=$conn->prepare("SELECT SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
         $query->bind_param("s", $pageID);
         $query->execute();
         $result = $query->get_result();
@@ -53,7 +53,21 @@
         while($row=$result->fetch_assoc()){
             $CourseName=$row["CourseName"];
         }
-        echo $CourseName;
+        return $CourseName;
+
+        $query->close();
+    }
+
+    function getCourseNum($conn, $pageID){
+        $query=$conn->prepare("SELECT CourseNumber FROM just_in_time_resources WHERE WebPage = ?");
+        $query->bind_param("s", $pageID);
+        $query->execute();
+        $result = $query->get_result();
+
+        while($row=$result->fetch_assoc()){
+            $CourseNum=$row["CourseNumber"];
+        }
+        return $CourseNum;
 
         $query->close();
     }
