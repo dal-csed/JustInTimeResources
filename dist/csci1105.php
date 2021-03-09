@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
     $pageID = basename(__FILE__);
     include 'scripts/connections.php';
     $conn = connect();
@@ -140,6 +140,10 @@
                         <a class="nav-link" href="csci3172.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 3172
+                        </a>
+                        <a class="nav-link" href="docker.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            Docker Tutorials
                         </a>
                     </div>
                 </div>
