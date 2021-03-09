@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    $pageID = basename(__FILE__);
+    include 'scripts/connections.php';
+    $conn = connect();
+    $course = getCourseName($conn, $pageID);
+    $code = getCourseNum($conn, $pageID);
+    $subj = getCourseSubj($conn, $pageID);
+    $courseName = $subj." ".$code;
+?>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>CSCI 2100</title>
+    <title><?php echo $subj." ".$code; ?></title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/cardstyle.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -15,6 +25,7 @@
 </head>
 
 <body class="sb-nav-fixed">
+
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -29,7 +40,6 @@
                             <div class="sb-nav-link-icon"><i class="fa fa-home"></i></div>
                             Home
                         </a>
-
                         <div class="sb-sidenav-menu-heading">Courses</div>
 
                         <a class="nav-link" href="csci1105.php">
@@ -138,15 +148,15 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4" style="font-family:Verdana ">Just In Time Resources</h1>
+                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $subj." ".$code." - ".$course;?></h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
-                        <li class="breadcrumb-item active">2100</li>
+                        <li class="breadcrumb-item active"><?php echo $code;?></li>
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
-                        <<p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
-                            <p></p>
-                            <p><strong>IMPORTANT: The library ID for LinkedInLearning is halifaxca</strong></p>
+                        <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
+                        <p></p>
+                        <p><strong>IMPORTANT: The library ID for LinkedInLearning is halifaxca</strong></p>
                     </div>
 
                 </div>
@@ -154,14 +164,12 @@
                 <div class="container-fluid mt-2">
                     <div class="row">
                         <?php
-                        include 'scripts/connections.php';
-                        $pageID = "CSCI 2100";
-                        $conn = connect();
-                        getCourse($conn, $pageID);
+                        getCourse($conn, $courseName);
                         closeConn($conn);
                         ?>
                     </div>
                 </div>
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
