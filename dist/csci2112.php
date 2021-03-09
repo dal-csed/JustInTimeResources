@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
-    $pageID = basename(__FILE__);
-    include 'scripts/connections.php';
-    $conn = connect();
-    $course = getCourseName($conn, $pageID);
-    $code = getCourseNum($conn, $pageID);
-    $subj = getCourseSubj($conn, $pageID);
-    $courseName = $subj." ".$code;
+<?php
+$pageID = basename(__FILE__);
+include 'scripts/connections.php';
+$conn = connect();
+$course = getCourseName($conn, $pageID);
+$code = getCourseNum($conn, $pageID);
+$subj = getCourseSubj($conn, $pageID);
+$courseName = $subj . " " . $code;
 ?>
 
 <head>
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title><?php echo $subj." ".$code; ?></title>
+    <title><?php echo $subj . " " . $code; ?></title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/cardstyle.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -141,6 +141,11 @@
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 3172
                         </a>
+
+                        <a class="nav-link" href="docker.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            Docker Tutorials
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -148,10 +153,10 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $subj." ".$code." - ".$course;?></h1>
+                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $subj . " " . $code . " - " . $course; ?></h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
-                        <li class="breadcrumb-item active"><?php echo $code;?></li>
+                        <li class="breadcrumb-item active"><?php echo $code; ?></li>
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
                         <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
