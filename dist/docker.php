@@ -162,7 +162,7 @@
               </div>
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>Here is the Docker Intro <a href=".\pdf\1. 00 Docker Introduction and Installation.pdf">documentation</a>.</p>
+                  <p>Here is the Docker Intro <a target="_blank" href=".\pdf\1. 00 Docker Introduction and Installation.pdf">documentation</a>.</p>
 
                   <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7379d797-5650-4d94-a5d3-ace50137e4a4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
                   </br>
@@ -193,7 +193,7 @@
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>Here is the <a href=".\pdf\3.%20Documentation_DockerFile.pdf">documentation</a>.</p>
+                  <p>Here is the <a target="_blank" href=".\pdf\3.%20Documentation_DockerFile.pdf">documentation</a>.</p>
                   <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3d47225e-8aeb-43f0-b740-ace5013ddb6a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
                   </br>
                   <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8ce30d34-b452-4b37-86ed-ace5013ddffa&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
