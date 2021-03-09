@@ -7,6 +7,8 @@
     $conn = connect();
     $course = getCourseName($conn, $pageID);
     $code = getCourseNum($conn, $pageID);
+    $subj = getCourseSubj($conn, $pageID);
+    $courseName = $subj." ".$code;
 ?>
 
 <head>
@@ -15,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title><?php echo $code; ?></title>
+    <title><?php echo $subj." ".$code; ?></title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/cardstyle.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -146,7 +148,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $code." - ".$course;?></h1>
+                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $subj." ".$code." - ".$course;?></h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
                         <li class="breadcrumb-item active"><?php echo $code;?></li>
@@ -162,7 +164,7 @@
                 <div class="container-fluid mt-2">
                     <div class="row">
                         <?php
-                        getCourse($conn, $code);
+                        getCourse($conn, $courseName);
                         closeConn($conn);
                         ?>
                     </div>
