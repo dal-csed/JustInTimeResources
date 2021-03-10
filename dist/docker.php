@@ -132,12 +132,7 @@
 
             <a class="nav-link" href="docker.php">
               <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
-              Docker
-            </a>
-
-            <a class="nav-link" href="openstack.php">
-              <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
-              OpenStack
+              Docker Tutorials
             </a>
           </div>
         </div>
