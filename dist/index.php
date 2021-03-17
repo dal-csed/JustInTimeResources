@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php
-    include 'scripts/connections.php';
-    $conn = connect();
+include 'scripts/connections.php';
+$conn = connect();
 ?>
 
 <head>
@@ -192,8 +192,7 @@
                         </div>
                     </div>
                     <div class="card mt-5 col-sm-8 mx-auto">
-<<<<<<< HEAD
-                        <form>
+                        <form onsubmit="return alert('Thank you! The form has been submitted');">
                             <h3 class="text-center mt-2">Course suggestion</h3>
                             <div class="form-group ml-2 mr-2">
                                 <label for="exampleFormControlInput1">Dalhousie Course</label>
@@ -210,25 +209,6 @@
                             <button type="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Send</button>
                         </form>
                     </div>
-=======
-                    <form onsubmit="return alert('Thank you! The form has been submitted');">
-                      <h3 class="text-center mt-2">Course suggestion</h3>
-                      <div class="form-group ml-2 mr-2">
-                        <label for="exampleFormControlInput1">Dalhousie Course</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="CSCI Course">
-                      </div>
-                      <div class="form-group ml-2 mr-2">
-                        <label for="exampleFormControlInput2">Just In Time Resource(s)</label>
-                        <textarea type="name" class="form-control" id="exampleFormControlInput1" placeholder="Link to the resource(s) you would like to suggest"></textarea>
-                      </div>
-                      <div class="form-group ml-2 mr-2">
-                        <label for="exampleFormControlInput3">Additional Note (Optional)</label>
-                        <textarea type="name" class="form-control" id="exampleFormControlInput1" ></textarea>
-                      </div>
-                        <button type="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Send</button>
-                    </form>
-                  </div>
->>>>>>> 6fa63dda6b3a87bedfd95160237175dc0f9dbf62
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
