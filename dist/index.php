@@ -186,6 +186,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card mt-5 col-sm-8 mx-auto">
+                    <form>
+                      <h3 class="text-center mt-2">Course suggestion</h3>
+                      <div class="form-group ml-2 mr-2">
+                        <label for="exampleFormControlInput1">Dalhousie Course</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="CSCI Course">
+                      </div>
+                      <div class="form-group ml-2 mr-2">
+                        <label for="exampleFormControlInput2">Just In Time Resource(s)</label>
+                        <textarea type="name" class="form-control" id="exampleFormControlInput1" placeholder="Link to the resource(s) you would like to suggest"></textarea>
+                      </div>
+                      <div class="form-group ml-2 mr-2">
+                        <label for="exampleFormControlInput3">Additional Note (Optional)</label>
+                        <textarea type="name" class="form-control" id="exampleFormControlInput1" ></textarea>
+                      </div>
+                        <button type="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Send</button>
+                    </form>
+                  </div>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
