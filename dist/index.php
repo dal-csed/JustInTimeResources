@@ -186,6 +186,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row" style="padding: 2%;">
+                        <h3>Feedback</h3>
+                        <div class="row" style="padding-left: 2%;padding-right: 2%;">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="inputName" aria-describedby="nameIn" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputFeedback">Feedback</label>
+                                    <input type="text" class="form-control" id="inputFeedback" aria-describedby="nameIn" placeholder="Enter your feedback...">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
