@@ -211,7 +211,7 @@ $conn = connect();
                                 <label for="comment">Additional Note (Optional)</label>
                                 <input type="text" class="form-control" id="comment"></textarea>
                             </div>
-                            <input type="button" value="Submit" name="submit" onclick="submitForm()" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">
+                            <button type="submit" name="submit" onclick="submitForm()" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Submit</button>
                         </form>
                     </div>
                 </div>
