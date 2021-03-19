@@ -197,7 +197,7 @@ $conn = connect();
                         </div>
                     </div>
                     <div class="card mt-5 col-sm-8 mx-auto">
-                        <form id="courseForm" action="scripts/courses.php" onsubmit="return alert('Thank you! The form has been submitted');" method="POST">
+                        <form id="courseForm" onsubmit="return alert('Thank you! The form has been submitted');" method="POST">
                             <h3 class="text-center mt-2">Course suggestion</h3>
                             <div class="form-group ml-2 mr-2">
                                 <label for="dalCourse">Dalhousie Course</label>
@@ -211,7 +211,7 @@ $conn = connect();
                                 <label for="comment">Additional Note (Optional)</label>
                                 <input type="text" class="form-control" id="comment"></textarea>
                             </div>
-                            <button type="submit" name="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Submit</button>
+                            <input type="button" value="Submit" name="submit" onclick="submitForm()" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">
                         </form>
                     </div>
                 </div>
