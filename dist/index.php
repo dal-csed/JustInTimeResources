@@ -3,6 +3,11 @@
 
 <?php
 include 'scripts/connections.php';
+if($_SERVER['REQUEST_METHOD'] === "POST"){
+    $dalCourse = $_REQUEST['dalCourse'];
+    $suggCourse = $_REQUEST['suggCourse'];
+    $comment = $_REQUEST['comment'];
+}
 $conn = connect();
 ?>
 
@@ -192,21 +197,21 @@ $conn = connect();
                         </div>
                     </div>
                     <div class="card mt-5 col-sm-8 mx-auto">
-                        <form id="courseForm" onsubmit="return alert('Thank you! The form has been submitted');">
+                        <form id="courseForm" action="scripts/courses.php" onsubmit="return alert('Thank you! The form has been submitted');" method="POST">
                             <h3 class="text-center mt-2">Course suggestion</h3>
                             <div class="form-group ml-2 mr-2">
-                                <label for="exampleFormControlInput1">Dalhousie Course</label>
-                                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="CSCI Course" required>
+                                <label for="dalCourse">Dalhousie Course</label>
+                                <input type="text" class="form-control" id="dalCourse" placeholder="CSCI Course" required>
                             </div>
                             <div class="form-group ml-2 mr-2">
-                                <label for="exampleFormControlInput2">Just In Time Resource(s)</label>
-                                <textarea type="name" class="form-control" id="exampleFormControlInput1" placeholder="Link to the resource(s) you would like to suggest" required></textarea>
+                                <label for="suggCourse">Just In Time Resource(s)</label>
+                                <input type="text" class="form-control" id="suggCourse" placeholder="Link to the resource(s) you would like to suggest" required></textarea>
                             </div>
                             <div class="form-group ml-2 mr-2">
-                                <label for="exampleFormControlInput3">Additional Note (Optional)</label>
-                                <textarea type="name" class="form-control" id="exampleFormControlInput1"></textarea>
+                                <label for="comment">Additional Note (Optional)</label>
+                                <input type="text" class="form-control" id="comment"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Submit</button>
+                            <button type="submit" name="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Submit</button>
                         </form>
                     </div>
                 </div>
