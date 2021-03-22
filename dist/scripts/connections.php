@@ -29,7 +29,7 @@
             $Note=$row["Note"];
             $Link=$row["Link"];
             $Picture=$row["Picture"];
-            
+
             echo "\n\t\t\t\t\t\t<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>\n";
             echo "\t\t\t\t\t\t\t<a style='color: black; text-decoration: none;' target=\"_blank\" href=\"".$Link."\">\n";
             echo "\t\t\t\t\t\t\t<div class='card card-block'>\n";
@@ -84,5 +84,33 @@
         return $Subj;
 
         $query->close();
+    }
+
+    function getLike($conn, $pageID){
+      $query=$conn->prepare("SELECT like_num FROM like_dislike_count WHERE WebPage = ?");
+      $query->bind_param("s", $pageID);
+      $query->execute();
+      $result = $query->get_result();
+
+      while($row=$result->fetch_assoc()){
+          $like=$row["like_num"];
+      }
+      return $like;
+
+      $query->close();
+    }
+
+    function getDislike($conn, $pageID){
+      $query=$conn->prepare("SELECT dislike_num FROM like_dislike_count WHERE WebPage = ?");
+      $query->bind_param("s", $pageID);
+      $query->execute();
+      $result = $query->get_result();
+
+      while($row=$result->fetch_assoc()){
+          $dislike=$row["dislike_num"];
+      }
+      return $dislike;
+
+      $query->close();
     }
 ?>
