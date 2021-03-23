@@ -37,6 +37,7 @@
             echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
             echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
             echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
+            
             echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
             }
         }
@@ -93,5 +94,18 @@
 
         $query->close();
 
+    }
+
+    function likeDislike($like_count, $dislike_count){
+        echo "<div class=\"like-btn ";
+        if ($like_count == 1){
+            echo "like-h\"";
+        }
+        echo ">Like</div>";
+        echo "<div class=\"dislike-btn ";
+        if ($dislike_count == 1){
+            echo "dislike-h\"";
+        }
+        echo "></div>";
     }
 ?>
