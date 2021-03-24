@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'scripts/connections.php';
 extract($_POST);
 $user_ip = $_SERVER['REMOTE_ADDR'];
 
@@ -15,7 +15,7 @@ function mysqli_result($res,$row=0,$col=0){
 	 return false;
 }
 
-$link = mysqli_connect('localhost', 'root', 'root', 'test');
+$link = mysqli_connect('projects.cs.dal.ca', 'justintime', 'quoo6ooFiSoh1eic', 'justintime');
 
 // check if the user has already clicked on the unlike (rate = 2) or the like (rate = 1)
 $dislike_sql = mysqli_query($link,'SELECT COUNT(*) FROM  rating WHERE ip = "'.$user_ip.'" and id_item = "'.$pageID.'" and rate = 2 ');
