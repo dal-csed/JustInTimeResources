@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+    $pageID = basename(__FILE__);
     include 'scripts/connections.php';
     $conn = connect();
     if (isset($_POST['submit'])){
@@ -11,6 +12,8 @@
         
         submitForm($conn, $dalCourse, $suggCourse, $comment);
     }
+    $user_ip = $_SERVER['REMOTE_ADDR'];
+    
 ?>
 
 <head>
