@@ -17,37 +17,24 @@
         $conn->close();
     }
 
-    function percent($num_amount, $num_total) {
-      $count1 = $num_amount / $num_total;
-      $count2 = $count1 * 100;
-      $count = number_format($count2, 0);
-      return $count;
-    }
 
-    function mysqli_result($res,$row=0,$col=0){
-    	 $numrows = mysqli_num_rows($res);
-    	 if ($numrows && $row <= ($numrows-1) && $row >=0){
-    			 mysqli_data_seek($res,$row);
-    			 $resrow = (is_numeric($col)) ? mysqli_fetch_row($res) : mysqli_fetch_assoc($res);
-    			 if (isset($resrow[$col])){
-    					 return $resrow[$col];
-    			 }
-    	 }
-    	 return false;
-    }
 
     function getCourse($conn, $pageID){
-        $query=$conn->prepare("SELECT SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
+        $query=$conn->prepare("SELECT ID, SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
         $query->bind_param("s", $pageID);
         $query->execute();
         $result = $query->get_result();
+
+
         if ($result->num_rows >0){
             while($row=$result->fetch_assoc()){
+            $pageID = $row["ID"]; // The ID of the page, the article or the video ...
             $SuggestedCourse=$row["SuggestedCourse"];
             $Length=$row["Length"];
             $Note=$row["Note"];
             $Link=$row["Link"];
             $Picture=$row["Picture"];
+
 
             echo "\n\t\t\t\t\t\t<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>\n";
             echo "\t\t\t\t\t\t\t<a style='color: black; text-decoration: none;' target=\"_blank\" href=\"".$Link."\">\n";
@@ -60,8 +47,10 @@
             }
         }
 
+
         $query->close();
     }
+
 
     function getCourseName($conn, $pageID){
         $query=$conn->prepare("SELECT CourseName FROM courses WHERE WebPage = ?");
@@ -106,16 +95,11 @@
     }
 
     function submitForm($conn, $dalCourse, $suggCourse, $comment){
-        if(isset($_POST)){
-            $dalCourse = $_POST["dalCourse"];
-            $suggCourse = $_POST["suggCourse"];
-            $comment = $_POST["comment"];
+        $query = $conn->prepare("INSERT INTO course_suggestion(Dal_course, suggested_course, note) VALUES (?,?,?)");
+        $query->bind_param("sss", $dalCourse, $suggCourse, $comment);
+        $query->execute();
 
-            $query = $conn->prepare("INSERT INTO course_suggestion(Dal_course, suggested_course, note) VALUES (?,?,?)");
-            $query->bind_param("sss", $dalCourse, $suggCourse, $comment);
-            $query->execute();
+        $query->close();
 
-            $query->close();
-        }
     }
 ?>
