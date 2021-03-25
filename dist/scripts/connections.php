@@ -17,13 +17,14 @@
         $conn->close();
     }
 
-    function getCourse($conn, $pageID){
-        $query=$conn->prepare("SELECT SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
+    function getCourse($conn, $pageID, $userIP){
+        $query=$conn->prepare("SELECT ID, SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
         $query->bind_param("s", $pageID);
         $query->execute();
         $result = $query->get_result();
         if ($result->num_rows >0){
             while($row=$result->fetch_assoc()){
+            $CourseID=$row["ID"];
             $SuggestedCourse=$row["SuggestedCourse"];
             $Length=$row["Length"];
             $Note=$row["Note"];
@@ -37,6 +38,9 @@
             echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
             echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
             echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
+            echo "\t\t\t\t\t\t\t\t";
+            likeDislike(0,0);
+            //likeDislike(checkLike($conn, $userIP, $CourseID), checkDislike($conn, $userIP, $CourseID));
             echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
             }
         }
@@ -87,16 +91,58 @@
     }
 
     function submitForm($conn, $dalCourse, $suggCourse, $comment){
-        if(isset($_POST)){
-            $dalCourse = $_POST["dalCourse"];
-            $suggCourse = $_POST["suggCourse"];
-            $comment = $_POST["comment"];
+        $query = $conn->prepare("INSERT INTO course_suggestion(Dal_course, suggested_course, note) VALUES (?,?,?)");
+        $query->bind_param("sss", $dalCourse, $suggCourse, $comment);
+        $query->execute();
 
-            $query = $conn->prepare("INSERT INTO course_suggestion(Dal_course, suggested_course, note) VALUES (?,?,?)");
-            $query->bind_param("sss", $dalCourse, $suggCourse, $comment);
-            $query->execute();
+        $query->close();
 
-            $query->close();
+    }
+
+    function likeDislike($like_count, $dislike_count){
+        echo "<div class=\"like-btn ";
+        if ($like_count == 1){
+            echo "like-h\"";
         }
+        echo "\">Like</div>";
+        echo "<div class=\"dislike-btn ";
+        if ($dislike_count == 1){
+            echo "dislike-h\"";
+        }
+        echo "\">Dislike</div>";
+    }
+
+    function checkLike($conn, $userIP, $courseID){
+        $query = $conn->prepare("SELECT COUNT(*) FROM rating WHERE ip=? AND id_item=? AND rate=?");
+        $rate=1;
+        $query->bind_param("ssi", $userIP, $courseID, $rate);
+        $query->execute();
+
+        $result = $query->get_result();
+        $count=0;
+
+        if ($result > 1){
+            $count=$result;
+        }
+        return $count;
+
+        $query->close();
+    }
+    
+    function checkDislike($conn, $userIP, $courseID){
+        $query = $conn->prepare("SELECT COUNT(*) FROM rating WHERE ip=? AND id_item=? AND rate=?");
+        $rate=2;
+        $query->bind_param("ssi", $userIP, $courseID, $rate);
+        $query->execute();
+
+        $result = $query->get_result();
+        $count=0;
+
+        if ($result > 1){
+            $count=$result;
+        }
+        return $count;
+
+        $query->close();
     }
 ?>
