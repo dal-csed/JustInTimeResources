@@ -24,14 +24,13 @@ $courseName = $subj . " " . $code;
     <link href="css/style.css" rel="stylesheet"/>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/svg+xml" href="./assets/img/journals.svg">
 </head>
 
 <body class="sb-nav-fixed">
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html" style="font-family:Verdana "> JUST IN TIME</a>
+        <a class="navbar-brand" href=" index.php" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
     </nav>
     <div id="layoutSidenav">
@@ -173,12 +172,11 @@ $courseName = $subj . " " . $code;
                 <div class="container-fluid mt-2">
                     <div class="row">
                         <?php
-                        getCourse($conn, $courseName, $userIP);
+                        getCourse($conn, $courseName);
                         closeConn($conn);
                         ?>
                     </div>
                 </div>
-
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">

@@ -17,7 +17,7 @@
         $conn->close();
     }
 
-    function getCourse($conn, $pageID, $userIP){
+    function getCourse($conn, $pageID){
         $query=$conn->prepare("SELECT ID, SuggestedCourse, Length, Note, Link, Picture FROM just_in_time_resources WHERE CourseNumber = ?");
         $query->bind_param("s", $pageID);
         $query->execute();
@@ -39,7 +39,9 @@
             echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
             echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
             echo "\t\t\t\t\t\t\t\t";
-            likeDislike(0,0);
+            echo "<span class=\"likebtn-wrapper like-dislike\" data-theme=\"bootstrap\" data-identifier=\"item_1\"></span>";
+            echo '<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>';
+            //likeDislike();
             //likeDislike(checkLike($conn, $userIP, $CourseID), checkDislike($conn, $userIP, $CourseID));
             echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
             }
@@ -99,18 +101,14 @@
 
     }
 
-    function likeDislike($like_count, $dislike_count){
-        echo "<div class=\"like-btn ";
-        if ($like_count == 1){
-            echo "like-h\"";
-        }
-        echo "\">Like</div>";
-        echo "<div class=\"dislike-btn ";
-        if ($dislike_count == 1){
-            echo "dislike-h\"";
-        }
-        echo "\">Dislike</div>";
-    }
+    // function likeDislike($d,$e,$s){
+    //     if(d.getElementById("likebtn_wjs"))
+    //         return;
+    //     a=d.createElement(e);
+    //     m=d.getElementsByTagName(e)[0];
+    //     a.async=1;a.id="likebtn_wjs";a.src=s;
+    //     m.parentNode.insertBefore(a, m))(document,"script","//w.likebtn.com/js/w/widget.js");
+    // }
 
     function checkLike($conn, $userIP, $courseID){
         $query = $conn->prepare("SELECT COUNT(*) FROM rating WHERE ip=? AND id_item=? AND rate=?");
