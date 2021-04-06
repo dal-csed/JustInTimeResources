@@ -2,11 +2,11 @@
 <html lang="en">
 
 <?php
-$pageID = basename(__FILE__);
-include 'scripts/connections.php';
-$conn = connect();
-$courseID = $_GET['course'];
-echo "this is the course id: ".$courseID;
+    $pageID = basename(__FILE__);
+    include 'scripts/connections.php';
+    $conn = connect();
+    $courseID = $_POST['courseID'];
+    echo $courseID;
 ?>
 
 <head>
@@ -160,7 +160,7 @@ echo "this is the course id: ".$courseID;
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
                         <p>Please give a rating for this course!</p>
                     </div>
-                    <div class="card mt-6 col-sm-6 mx-auto" style="padding-bottom: 2%;">
+                    <div class="card mt-7 col-sm-8 mx-auto" style="padding-bottom: 2%;">
                         <?php
                         poll($courseID, $conn);
                         ?>

@@ -38,7 +38,7 @@
                 echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
                 echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
                 echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
-                echo "\t\t\t\t\t\t\t\t<form action=\"feedback.php\" method=\"GET\">\n";
+                echo "\t\t\t\t\t\t\t\t<form action=\"feedback.php\" method=\"POST\">\n";
                 echo "\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"courseID\" id=\"courseID\" value=\"".$courseID."\" >\n";
                 echo "\t\t\t\t\t\t\t\t\t<input type=\"submit\" name=\"submit\" id=\"submit\" class=\"btn btn-secondary btn-sm\" value=\"Rate this course!\">\n";
                 echo "\t\t\t\t\t\t\t\t</form>\n";
