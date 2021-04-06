@@ -10247,3 +10247,8 @@ body {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
+
+.like-dislike {
+  padding:2%;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
