@@ -6,11 +6,8 @@ $pageID = basename(__FILE__);
 include 'scripts/connections.php';
 $conn = connect();
 if (isset($_POST['submit'])) {
-    $dalCourse = $_POST["dalCourse"];
-    $suggCourse = $_POST["suggCourse"];
-    $comment = $_POST["comment"];
-
-    submitForm($conn, $dalCourse, $suggCourse, $comment);
+    $courseID = $_POST['course'];
+    echo $courseID;
 }
 ?>
 
@@ -159,65 +156,17 @@ if (isset($_POST['submit'])) {
                 <div class="container-fluid">
                     <h1 class="mt-4" style="font-family:Verdana ">Just In Time Resources</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Home</li>
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item active">Feedback</li>
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
-                        <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
-                        <p>The sidebar on the left includes the CS courses which you can select to view a list of related LinkedIn Learning resources.</p>
-                        <p>Below are tutorials on how to create an account and log in with the Halifax Public Libraries, and how to access LinkedIn Learning through Halifax Public Libraries. </p>
-                        <p>NOTE: Students can register even if they are currently not in NS. When entering your address details, use the address of the faculty they are studying with or use the Dalhousie address. You can then select the box to declare that you are a Nova Scotia Resident.</p>
+                        <p>Please give a rating for this course!</p>
                     </div>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Logging into Halifax Public libraries
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=70101520-62f1-4e3d-988f-acb801015a06&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Access LinkedIn Learning through Halifax Public Libraries
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <iframe src="https://dal.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0058a136-9df5-43e0-8d4b-acaa013889aa&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card mt-6 col-sm-6 mx-auto" style="padding-bottom: 2%;">
+                        <?php
+                        poll($courseID, $conn);
+                        ?>
                     </div>
-                    <div class="card mt-5 col-sm-8 mx-auto">
-                        <form id="courseForm" onsubmit="return alert('Thank you! The form has been submitted');" method="POST">
-                            <h3 class="text-center mt-2">Course Suggestions</h3>
-                            <div class="form-group ml-2 mr-2">
-                                <label>Dalhousie Course</label>
-                                <input type="text" class="form-control" name="dalCourse" placeholder="CSCI Course" required>
-                            </div>
-                            <div class="form-group ml-2 mr-2">
-                                <label>Just In Time Resource(s)</label>
-                                <input type="text" class="form-control" name="suggCourse" placeholder="Link to the resource(s) you would like to suggest" required></textarea>
-                            </div>
-                            <div class="form-group ml-2 mr-2">
-                                <label>Additional Comments (Optional)</label>
-                                <input type="text" class="form-control" name="comment"></textarea>
-                            </div>
-                            <button type="submit" name="submit" class="btn btn-secondary btn-lg ml-2 mr-2 mb-2">Submit</button>
-                        </form>
-                    </div>
-                    <br>
-                </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">

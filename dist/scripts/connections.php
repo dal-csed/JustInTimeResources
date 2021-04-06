@@ -24,26 +24,25 @@
         $result = $query->get_result();
         if ($result->num_rows >0){
             while($row=$result->fetch_assoc()){
-            $CourseID=$row["ID"];
-            $SuggestedCourse=$row["SuggestedCourse"];
-            $Length=$row["Length"];
-            $Note=$row["Note"];
-            $Link=$row["Link"];
-            $Picture=$row["Picture"];
-            
-            echo "\n\t\t\t\t\t\t<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>\n";
-            echo "\t\t\t\t\t\t\t<a style='color: black; text-decoration: none;' target=\"_blank\" href=\"".$Link."\">\n";
-            echo "\t\t\t\t\t\t\t<div class='card card-block'>\n";
-            echo "\t\t\t\t\t\t\t\t<img src='assets/img/".$Picture."' alt='".$Picture."'>\n";
-            echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
-            echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
-            echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
-            echo "\t\t\t\t\t\t\t\t";
-            echo "<span class=\"likebtn-wrapper like-dislike\" data-theme=\"bootstrap\" data-identifier=\"item_1\"></span>";
-            echo '<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>';
-            //likeDislike();
-            //likeDislike(checkLike($conn, $userIP, $CourseID), checkDislike($conn, $userIP, $CourseID));
-            echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
+                $courseID=$row["ID"];
+                $SuggestedCourse=$row["SuggestedCourse"];
+                $Length=$row["Length"];
+                $Note=$row["Note"];
+                $Link=$row["Link"];
+                $Picture=$row["Picture"];
+                
+                echo "\n\t\t\t\t\t\t<div class='col-lg-3 col-md-6 col-sm-6 mb-2'>\n";
+                echo "\t\t\t\t\t\t\t<a style='color: black; text-decoration: none;' target=\"_blank\" href=\"".$Link."\">\n";
+                echo "\t\t\t\t\t\t\t<div class='card card-block'>\n";
+                echo "\t\t\t\t\t\t\t\t<img src='assets/img/".$Picture."' alt='".$Picture."'>\n";
+                echo "\t\t\t\t\t\t\t\t<h5 class='card-title ml-2 mr-2 mt-3 mb-3'>".$SuggestedCourse."</h5>\n";
+                echo "\t\t\t\t\t\t\t\t<p class='card-text ml-2 mr-2 scrollable'>".$Note."</p>\n";
+                echo "\t\t\t\t\t\t\t\t<div class='card-footer text-muted'>".$Length."</div>\n";
+                echo "\t\t\t\t\t\t\t\t<form action=\"feedback.php\" method=\"POST\">\n";
+                echo "\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"courseID\" id=\"courseID\" value=\"".$courseID."\" >\n";
+                echo "\t\t\t\t\t\t\t\t\t<input type=\"submit\" name=\"submit\" id=\"submit\" class=\"btn btn-secondary btn-sm\" value=\"Rate this course!\">\n";
+                echo "\t\t\t\t\t\t\t\t</form>\n";
+                echo "\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n";
             }
         }
 
@@ -98,48 +97,19 @@
         $query->execute();
 
         $query->close();
-
     }
 
-    // function likeDislike($d,$e,$s){
-    //     if(d.getElementById("likebtn_wjs"))
-    //         return;
-    //     a=d.createElement(e);
-    //     m=d.getElementsByTagName(e)[0];
-    //     a.async=1;a.id="likebtn_wjs";a.src=s;
-    //     m.parentNode.insertBefore(a, m))(document,"script","//w.likebtn.com/js/w/widget.js");
-    // }
-
-    function checkLike($conn, $userIP, $courseID){
-        $query = $conn->prepare("SELECT COUNT(*) FROM rating WHERE ip=? AND id_item=? AND rate=?");
-        $rate=1;
-        $query->bind_param("ssi", $userIP, $courseID, $rate);
+    function poll($courseID, $conn){
+        $query=$conn->prepare("SELECT link FROM polls WHERE courseID=?");
+        $query->bind_param("i", $courseID);
         $query->execute();
 
         $result = $query->get_result();
-        $count=0;
-
-        if ($result > 1){
-            $count=$result;
+        while($row=$result->fetch_assoc()){
+            $link=$row["link"];
         }
-        return $count;
-
-        $query->close();
-    }
-    
-    function checkDislike($conn, $userIP, $courseID){
-        $query = $conn->prepare("SELECT COUNT(*) FROM rating WHERE ip=? AND id_item=? AND rate=?");
-        $rate=2;
-        $query->bind_param("ssi", $userIP, $courseID, $rate);
-        $query->execute();
-
-        $result = $query->get_result();
-        $count=0;
-
-        if ($result > 1){
-            $count=$result;
-        }
-        return $count;
+        
+        echo "<iframe width=\"700px\" height= \"750px\" src= \"".$link."&embed=true\" frameborder= \"0\" marginwidth= \"0\" marginheight= \"0\" style= \"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>\n";
 
         $query->close();
     }
