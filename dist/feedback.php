@@ -5,10 +5,8 @@
 $pageID = basename(__FILE__);
 include 'scripts/connections.php';
 $conn = connect();
-if (isset($_POST['submit'])) {
-    $courseID = $_POST['course'];
-    echo $courseID;
-}
+$courseID = $_GET['course'];
+echo "this is the course id: ".$courseID;
 ?>
 
 <head>
