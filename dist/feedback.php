@@ -6,7 +6,6 @@
     include 'scripts/connections.php';
     $conn = connect();
     $courseID = $_POST['courseID'];
-    echo $courseID;
 ?>
 
 <head>
