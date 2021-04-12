@@ -165,15 +165,18 @@ $courseID = $_POST['courseID'];
                         ?>
                     </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid">
-                    <div class="text-muted">&copy; Just In Time Resources</div>
-                    <div>
-                        <a href="mailto:csed@dal.ca">csed@dal.ca</a>
-                        &middot;
-                        #WeAreAllCS
-                    </div>
-            </footer>
+             <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">&copy; Just In Time Resources</div>
+            <div>
+              <a href="mailto:csed@dal.ca">csed@dal.ca</a>
+              &middot;
+              #WeAreAllCS
+            </div>
+          </div>
+        </div>
+      </footer>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>

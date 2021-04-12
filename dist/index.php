@@ -221,12 +221,15 @@ if (isset($_POST['submit'])) {
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
-                    <div class="text-muted">&copy; Just In Time Resources</div>
-                    <div>
-                        <a href="mailto:csed@dal.ca">csed@dal.ca</a>
-                        &middot;
-                        #WeAreAllCS
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">&copy; Just In Time Resources</div>
+                        <div>
+                            <a href="mailto:csed@dal.ca">csed@dal.ca</a>
+                            &middot;
+                            #WeAreAllCS
+                        </div>
                     </div>
+                </div>
             </footer>
         </div>
     </div>
