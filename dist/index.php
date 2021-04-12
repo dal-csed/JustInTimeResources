@@ -2,15 +2,15 @@
 <html lang="en">
 
 <?php
-    include 'scripts/connections.php';
-    $conn = connect();
-    if (isset($_POST['submit'])){
-        $dalCourse = $_POST["dalCourse"];
-        $suggCourse = $_POST["suggCourse"];
-        $comment = $_POST["comment"];
+include 'scripts/connections.php';
+$conn = connect();
+if (isset($_POST['submit'])) {
+    $dalCourse = $_POST["dalCourse"];
+    $suggCourse = $_POST["suggCourse"];
+    $comment = $_POST["comment"];
 
-        submitForm($conn, $dalCourse, $suggCourse, $comment);
-    }
+    submitForm($conn, $dalCourse, $suggCourse, $comment);
+}
 ?>
 
 <head>
@@ -221,10 +221,12 @@
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Just In Time Resources</div>
+                    <div class="text-muted">&copy; Just In Time Resources</div>
+                    <div>
+                        <a href="mailto:csed@dal.ca">csed@dal.ca</a>
+                        &middot;
+                        #WeAreAllCS
                     </div>
-                </div>
             </footer>
         </div>
     </div>

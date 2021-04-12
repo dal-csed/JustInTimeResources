@@ -2,10 +2,10 @@
 <html lang="en">
 
 <?php
-    $pageID = basename(__FILE__);
-    include 'scripts/connections.php';
-    $conn = connect();
-    $courseID = $_POST['courseID'];
+$pageID = basename(__FILE__);
+include 'scripts/connections.php';
+$conn = connect();
+$courseID = $_POST['courseID'];
 ?>
 
 <head>
@@ -167,10 +167,12 @@
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Just In Time Resources</div>
+                    <div class="text-muted">&copy; Just In Time Resources</div>
+                    <div>
+                        <a href="mailto:csed@dal.ca">csed@dal.ca</a>
+                        &middot;
+                        #WeAreAllCS
                     </div>
-                </div>
             </footer>
         </div>
     </div>
