@@ -62,3 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
 	height: 30px; padding: 20px 10px 10px 10px;
 	border-bottom: #e6e6e6 1px solid; display: none;
 }
+
+.counter{
+	float: right;
+}
