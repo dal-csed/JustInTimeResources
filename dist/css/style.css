@@ -50,19 +50,6 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-left: 15px;
 }
 
-.share-btn{
-	height: 52px; display: inline-block;
-	float: left;  font-size: 13px; line-height: 55px;
-	padding: 0 10px; margin-left: 30px;
-	border-bottom: #fff 3px solid;
-	cursor: pointer;
-}
-.share-btn:hover{ border-bottom: #c9231a 3px solid; }
-.share-cnt{
-	height: 30px; padding: 20px 10px 10px 10px;
-	border-bottom: #e6e6e6 1px solid; display: none;
-}
-
 .counter{
 	float: right;
 }
