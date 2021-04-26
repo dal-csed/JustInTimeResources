@@ -32,12 +32,6 @@ if (isset($_POST['submit'])) {
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href=" index.php" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-
-        <div class="counter navbar-right" style="float: right;">
-            <!-- hitwebcounter Code START -->
-            <a href="https://www.hitwebcounter.com" target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=7804604&style=0008&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter" border="0" /></a>
-        </div>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -229,6 +223,11 @@ if (isset($_POST['submit'])) {
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">&copy; Just In Time Resources</div>
+                        <div class="counter">
+                            <!-- hitwebcounter Code START -->
+                            <a href="https://www.hitwebcounter.com" target="_blank">
+                                <img src="https://hitwebcounter.com/counter/counter.php?page=7804604&style=0008&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter" border="0" /></a>
+                        </div>
                         <div>
                             <a href="mailto:csed@dal.ca">csed@dal.ca</a>
                             &middot;
