@@ -28,7 +28,7 @@ $courseName = $subj . " " . $code;
 
 <body class="sb-nav-fixed">
 
-     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href=" index.php" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
     </nav>
@@ -155,14 +155,16 @@ $courseName = $subj . " " . $code;
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4" style="font-family:Verdana " style="font-family:Verdana"><?php echo $subj . " " . $code . " - " . $course; ?></h1>
+                    <div class="text-center">
+                        <img src="./assets/img/Banner - CS Building.png" style="width:100%;height:auto;" class="img-fluid" alt="Responsive image">
+                    </div>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
                         <li class="breadcrumb-item active"><?php echo $code; ?></li>
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
                         <?php
-                            description();
+                        description();
                         ?>
                     </div>
 

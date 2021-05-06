@@ -156,9 +156,9 @@ if (isset($_POST['submit'])) {
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                  <div class="text-center">
-                    <img src="./assets/img/Banner - CS Building.png" style="width:100%;height:auto;" class="img-fluid" alt="Responsive image">
-                  </div>
+                    <div class="text-center">
+                        <img src="./assets/img/Banner - CS Building.png" style="width:100%;height:auto;" class="img-fluid" alt="Responsive image">
+                    </div>
                     <h1 class="mt-4" style="font-family:Verdana ">Just In Time Resources</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Home</li>
