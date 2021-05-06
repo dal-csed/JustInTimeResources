@@ -161,9 +161,9 @@ $courseName = $subj . " " . $code;
                         <li class="breadcrumb-item active"><?php echo $code; ?></li>
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
-                        <p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>
-                        <p></p>
-                        <p><strong>IMPORTANT: The library ID for LinkedInLearning is halifaxca</strong></p>
+                        <?php
+                            description();
+                        ?>
                     </div>
 
                 </div>

@@ -119,4 +119,10 @@
 
         $query->close();
     }
+
+    function description(){
+        echo "\t\t\t\t\t\t<p>LinkedIn Learning, formally Lynda, is a website that offers different video courses taught by industry experts regarding software, creative, and business skills. It is a subsidiary of LinkedIn.</p>";
+        echo "\t\t\t\t\t\t<p><strong>All the resources are free (unless indicated)</strong>. You only need to create a Halifax Public Libraries account to access the LinkedIn Learning resources.</p>";
+        echo "<br>\t\t\t\t\t\t<p><strong>IMPORTANT: The library ID for LinkedInLearning is halifaxca</strong></p>";
+    }
 ?>
