@@ -24,7 +24,7 @@ $courseID = $_POST['courseID'];
 </head>
 
 <body class="sb-nav-fixed">
-     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href=" index.php" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
     </nav>
@@ -151,6 +151,9 @@ $courseID = $_POST['courseID'];
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
+                    <div class="text-center">
+                        <img src="./assets/img/Banner - CS Building.png" style="width:100%;height:auto;" class="img-fluid" alt="Responsive image">
+                    </div>
                     <h1 class="mt-4" style="font-family:Verdana ">Just In Time Resources</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">Home</li>
