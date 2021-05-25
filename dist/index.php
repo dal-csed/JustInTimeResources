@@ -45,6 +45,11 @@ if (isset($_POST['submit'])) {
                         </a>
                         <div class="sb-sidenav-menu-heading">Courses</div>
 
+                        <a class="nav-link" href="allcourses.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            All Courses
+                        </a>
+
                         <a class="nav-link" href="csci1105.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1105
