@@ -165,7 +165,7 @@ $conn = connect();
 
                         <a class="nav-link" href="gitlab.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
-                            gitlab
+                            Gitlab Tutorials
                         </a>
 
                         <a class="nav-link" href="docker.php">

@@ -169,6 +169,11 @@ $courseName = $subj . " " . $code;
                             CSCI 4174
                         </a>
 
+                        <a class="nav-link" href="gitlab.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            Gitlab Tutorials
+                        </a>
+
                         <a class="nav-link" href="docker.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             Docker Tutorials
