@@ -28,7 +28,7 @@ $courseName = $subj . " " . $code;
 
 <body class="sb-nav-fixed">
 
-     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href=" index.php" style="font-family:Verdana "> JUST IN TIME</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
     </nav>
@@ -64,6 +64,11 @@ $courseName = $subj . " " . $code;
                             CSCI 1108
                         </a>
 
+                        <a class="nav-link" href="csci1109.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1109
+                        </a>
+
                         <a class="nav-link" href="csci1110.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1110
@@ -77,6 +82,11 @@ $courseName = $subj . " " . $code;
                         <a class="nav-link" href="csci1170.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1170
+                        </a>
+
+                        <a class="nav-link" href="csci1300.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1300
                         </a>
 
                         <a class="nav-link" href="csci1800_1801.php">
@@ -170,7 +180,7 @@ $courseName = $subj . " " . $code;
                     </ol>
                     <div class="row" style="padding-left: 2%;padding-right: 2%;">
                         <?php
-                            description();
+                        description();
                         ?>
                     </div>
 

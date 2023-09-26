@@ -65,6 +65,11 @@ if (isset($_POST['submit'])) {
                             CSCI 1108
                         </a>
 
+                        <a class="nav-link" href="csci1109.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1109
+                        </a>
+
                         <a class="nav-link" href="csci1110.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1110
@@ -76,6 +81,11 @@ if (isset($_POST['submit'])) {
                         </a>
 
                         <a class="nav-link" href="csci1170.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1170
+                        </a>
+
+                        <a class="nav-link" href="csci1300.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1170
                         </a>

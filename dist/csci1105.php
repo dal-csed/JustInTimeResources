@@ -64,6 +64,11 @@ $courseName = $subj . " " . $code;
                             CSCI 1108
                         </a>
 
+                        <a class="nav-link" href="csci1109.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1109
+                        </a>
+
                         <a class="nav-link" href="csci1110.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1110
@@ -77,6 +82,11 @@ $courseName = $subj . " " . $code;
                         <a class="nav-link" href="csci1170.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
                             CSCI 1170
+                        </a>
+
+                        <a class="nav-link" href="csci1300.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                            CSCI 1300
                         </a>
 
                         <a class="nav-link" href="csci1800_1801.php">
@@ -184,6 +194,7 @@ $courseName = $subj . " " . $code;
                         ?>
                     </div>
                 </div>
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
